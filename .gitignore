@@ -1,1 +1,19 @@
-/target
+# build output
+/target/
+
+# Windows executables (if you accidentally check one in)
+**/*.exe
+
+# IDE/editor files
+.idea/
+.vscode/
+*.swp
+
+# macOS
+.DS_Store
+
+# environment files
+.env
+
+# logs
+*.log
