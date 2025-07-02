@@ -22,6 +22,10 @@ async fn main() {
 
 async fn sync_languages() -> Result<(), Box<dyn std::error::Error>> {
     let args: Vec<String> = env::args().collect();
+    if args.iter().any(|a| a == "-h" || a == "--help") {
+        eprintln!("Usage: transl <header> <key> <value> <current_lang>");
+        std::process::exit(0);
+    }
 
     if args.len() != 5 {
         eprintln!("Usage: transl <header> <key> <value> <current_lang>");
